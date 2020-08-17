@@ -1,38 +1,291 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  height: 100%;
+}
+
+/* Start Sidebar style */
+#wrapper {
+  overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+.sideBarCss {
+  background-color: white;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#sidebar-wrapper .list-group {
+  width: 16rem;
+}
+#sidebar-wrapper .list-group a {
+  color: #0074f0;
+  list-style: none;
+  border: none;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+/* End Sidebar style */
+
+/* Start Sidebar icon styles */
+.iconStyle {
+  margin-right: 5px;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100px;
+  border-radius: 50%;
+  /* height: auto; */
+}
+/* End Sidebar icon styles */
+
+/* Start Menu Divider */
+#left {
+  float: left;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+#right {
+  float: left;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+}
+/* End Menu Divider */
+
+/* Start Menu styling */
+.menuDivider {
+  margin-left: 0;
+}
+.searchBarCss {
+  width: 30%;
+}
+.input-group > .form-control:focus {
+  box-shadow: none;
+}
+.input-group > .form-control {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+#badgeDesign {
+  background-color: white;
+  border: 1px solid #007bff;
+  color: #007bff;
+  font-weight: 700;
+}
+#badgeDesignAvailable {
+  background-color: white;
+  color: #007bff;
+  border-bottom: 1px solid #dfdfdf;
+  font-size: 14px;
+}
+
+.availableItem ul {
+  padding: 0;
+  margin: auto;
+}
+
+.availableItem ul li {
+  text-align: center;
+  list-style: none;
+  font-size: large;
+}
+/* End Menu styling */
+
+/* Start login and register form styling */
+.formLoginParent {
+  position: relative;
+  top: 15vh;
+}
+
+.formLogin {
+  width: 100%;
+  max-width: 330px;
+  padding: 20px;
+  margin: auto;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+/* End login and register form styling */
+
+/* Start New item page */
+.newItemCss {
+  position: relative;
+  top: 10vh;
+  padding: 20px;
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.badgeStyle {
+  font-size: medium;
+  padding: 0;
+}
+/* End new item page  */
+
+.list-group-menu {
+  margin-top: 4px;
+  margin-left: 2rem;
+  padding: 0;
+  margin-right: 2rem;
+  border-radius: 0.5rem;
+}
+
+/* .list-group-mine .list-group-item { */
+/* margin: 0; */
+/* padding: 0; */
+/* border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+} */
+/* 
+.list-group-mine .list-group-item:hover {
+  background-color: red;
+} */
+
+/* Start Homepage styling */
+.homePageCss {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  height: 100%;
+  color: #2c2c51;
+}
+.navbar-HomePageFont {
+  font-size: 17px;
+  font-weight: 500;
+}
+#root > div > nav > a {
+  font-size: large;
+  font-weight: 400;
+}
+#navbarNavHome > ul > li > a {
+  font-size: 17px;
+  color: #2c2c51;
+  font-weight: 500;
+}
+.btnCustom {
+  background-color: indianred;
+}
+.navbar-brand {
+  letter-spacing: 3px;
+  font-size: x-large !important;
+}
+.cardHomePageTitle {
+  /* color: #2c2c51; */
+  font-weight: 600;
+  font-size: 20px;
+}
+.jumbotronwithImage {
+  position: relative;
+}
+.jumbotronwithImage img {
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+/* .container .jumbotext {
+  width: 80%;
+  background-color: white;
+}
+.jumbotext {
+  position: absolute;
+  top: 28rem;
+  left: 8rem;
+  height: 15rem;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+} */
+.jumbotronHomePage {
+  position: absolute;
+  top: -5rem;
+  height: 18rem auto;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 0px 12px 1px rgba(191, 184, 191, 1);
+  -moz-box-shadow: 5px 0px 12px 1px rgba(191, 184, 191, 1);
+  box-shadow: 5px 0px 12px 1px rgba(191, 184, 191, 1);
+}
+.jumbotronHomePage .lead {
+  padding-top: 2rem;
+}
+.jumbotronHomePage .lead h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.jumbotronText {
+  /* text-align: center; */
+  padding-top: 15px;
+  font-size: 17px;
+}
+.card-deck {
+  border-radius: 25px;
+}
+.card-deck .card {
+  border: none;
+  /* color: #FE6C59 */
+  -webkit-box-shadow: 0px -13px 0px -5px rgba(254, 108, 89, 1);
+  -moz-box-shadow: 0px -13px 0px -5px rgba(254, 108, 89, 1);
+  box-shadow: 0px -13px 0px -5px rgba(254, 108, 89, 1);
+}
+.imageCardsHomePage {
+  border-radius: 25px;
+  -webkit-box-shadow: 0px -13px 0px -5px rgba(254, 108, 89, 1);
+  -moz-box-shadow: 0px -13px 0px -5px rgba(254, 108, 89, 1);
+  box-shadow: 0px -13px 0px -5px rgba(254, 108, 89, 1);
+}
+.pricingCardTitle {
+  font-size: 58px;
+  font-weight: 800;
+}
+/* End homepage styling */
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+  #left #right {
+    overflow: none;
+    width: 100%;
+    height: auto;
   }
 }

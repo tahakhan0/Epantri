@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import "./App.css";
+import { Route, Switch } from "react-router-dom";
+import Login from "./forms/Login";
+import Mainapp from "./components/Mainapp";
+import Register from "./forms/Register";
+// import NewItemForm from "./forms/NewItemForm";
+import Home from "./components/Home";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Fragment>
+        <Switch>
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/home" component={Home} />
+          <Mainapp />
+        </Switch>
+      </Fragment>
+    );
+  }
 }
 
 export default App;
